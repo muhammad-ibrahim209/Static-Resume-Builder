@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dynamic Resume Builder</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+</head>
+<body>
+    <h1>Dynamic Resume Builder</h1>
+    <div class="container">
+        <div class="form-section">
+            <h2>Personal Information</h2>
+            <form id="resumeForm">
+                <div class="form-group">
+                    <label for="name">Full Name:</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="phone">Phone:</label>
+                    <input type="tel" id="phone" name="phone" required>
+                </div>
+                <div class="form-group">
+                    <label for="summary">Professional Summary:</label>
+                    <textarea id="summary" name="summary" rows="4" required></textarea>
+                </div>
+
+                <h2>Education</h2>
+                <div id="educationFields">
+                    <div class="education-entry">
+                        <div class="form-group">
+                            <label for="institution">Institution:</label>
+                            <input type="text" name="institution[]" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="degree">Degree:</label>
+                            <input type="text" name="degree[]" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="year">Year:</label>
+                            <input type="text" name="year[]" required>
+                        </div>
+                    </div>
+                </div>
+                <button type="button" id="addEducation">Add Education</button>
+
+                <h2>Work Experience</h2>
+                <div id="experienceFields">
+                    <div class="experience-entry">
+                        <div class="form-group">
+                            <label for="company">Company:</label>
+                            <input type="text" name="company[]" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="position">Position:</label>
+                            <input type="text" name="position[]" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="duration">Duration:</label>
+                            <input type="text" name="duration[]" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="jobDescription">Job Description:</label>
+                            <textarea name="jobDescription[]" rows="3" required></textarea>
+                        </div>
+                    </div>
+                </div>
+                <button type="button" id="addExperience">Add Experience</button>
+
+                <h2>Skills</h2>
+                <div id="skillsFields">
+                    <div class="form-group">
+                        <input type="text" name="skills[]" placeholder="Enter a skill" required>
+                    </div>
+                </div>
+                <button type="button" id="addSkill">Add Skill</button>
+
+                <button type="submit" id="submitResume">Generate Resume</button>
+            </form>
+        </div>
+        <div class="preview-section" >
+            <h2 style="color: rgb(255, 115, 0);">Resume Preview </h2>
+            <div id="resumePreview" class="preview-content"></div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

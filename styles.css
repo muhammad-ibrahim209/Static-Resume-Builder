@@ -1,0 +1,97 @@
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    color: #000000;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    background: url(./img/background-with-clear-watercolor_1020-960.avif) no-repeat center / cover;
+}
+
+#resumePreview h1{
+    color:black;
+}
+
+h1,h2 {
+    color: rgb(255, 115, 0);
+    text-align: center;
+    
+}
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+
+}
+.form-section, .preview-section {
+    flex: 1;
+    min-width: 300px;
+    background-color: transparent;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 10px 20px 50px rgba(102, 101, 100, 0.9);
+}
+.preview-section{
+    text-align: center;
+    background-color: transparent;
+    color: rgb(8, 8, 8);
+    
+}
+.form-group {
+    margin-bottom: 15px;
+
+}
+label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+input[type="text"], input[type="email"], input[type="tel"], textarea {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #dddddd;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+button {
+    background-color: #3498db;
+    color: #fff;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+#downloadPDF {
+    background-color: #27ae60;
+    margin-top: 20px;
+}
+#downloadPDF:hover {
+    background-color: #2ecc71;
+}
+
+button:hover {
+    background-color: #2980b9;
+}
+.remove-btn {
+    background-color: #e74c3c;
+}
+.remove-btn:hover {
+    background-color: #c0392b;
+}
+.preview-section {
+    background-color:transparent;
+    border-radius: 8px;
+    box-shadow: 10px 20px 50px rgba(102, 101, 100, 0.9);
+
+}
+.preview-content {
+    border: 1px solid #ff6600;
+    padding: 20px;
+    border-radius: 4px;
+}
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+    }
+}
